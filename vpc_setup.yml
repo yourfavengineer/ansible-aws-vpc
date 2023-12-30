@@ -117,4 +117,30 @@
           - dest: 0.0.0.0/0
             gateway_id: "{{IGW_output.gateway_id}}"
       register: pubroute_output
+
+    - name: Setup NAT Gateway
+      ec2_vpc_nat_gateway:
+        state: "{{state}}"
+        subnet_id: "{{pubsub1_output.subnet.id}}"
+        wait: yes
+        region: "{{region}}"
+        if_exist_do_not_create: true
+      register: NATGW_output
+
+    - name: Setup private subnet route table
+      ec2_vpc_route_table:
+        vpc_id: "{{vpcoutput.vpc.id}}"
+        region: "{{region}}"
+        tags: 
+          name: Vprofile_PrivRT
+        subnets:
+          - "{{pubsub1_output.subnet.id}}"
+          - "{{pubsub2_output.subnet.id}}"
+          - "{{pubsub3_output.subnet.id}}"
+        routes: 
+          - dest: 0.0.0.0/0
+            gateway_id: "{{NATGW_output.nat_gateway_id}}"
+      register: NATGW_PRIV_output
+
+
       
