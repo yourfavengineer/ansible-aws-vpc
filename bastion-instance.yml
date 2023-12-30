@@ -33,7 +33,7 @@
             from_port: 22
             to_port: 22
             cidr_ip: "{{MYIP}}"
-      register: bastionSG-output
+      register: bastionSG_output
 
     
     - name: Creating Bastion host
@@ -55,6 +55,6 @@
           Owner: DevOps Team
         group_id: "{{bastionSG-output.group_id}}"
         ec2_vpc_subnet_id: "{{pubsub1id}}"
-      register: bastionhost-output
+      register: bastionhost_output
 
 
