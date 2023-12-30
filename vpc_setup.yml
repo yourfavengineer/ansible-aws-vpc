@@ -98,8 +98,8 @@
         vpc_id: "{{vpcoutput.vpc.id}}"
         region: "{{region}}"
         state: "{{state}}"
-         resource_tags: 
+        resource_tags: 
           name: vprofile_IGW
       register: IGW_output
-      
+
       
