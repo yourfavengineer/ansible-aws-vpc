@@ -142,5 +142,20 @@
             gateway_id: "{{NATGW_output.nat_gateway_id}}"
       register: NATGW_PRIV_output
 
+    - debug: 
+        var: "{{item}}"
+      loop:
+        - vpcoutput.vpc.id
+        - pubsub1_output.subnet.id
+        - pubsub2_output.subnet.id
+        - pubsub3_output.subnet.id
+        - Privsub1_output.subnet.id
+        - Privsub2_output.subnet.id
+        - Privsub2_output.subnet.id
+        - IGW_output.gateway_id
+        - pubroute_output.route_table.id
+        - NATGW_output.nat_gateway_id
+        - ATGW_PRIV_output.route_table.id
+      
 
       
