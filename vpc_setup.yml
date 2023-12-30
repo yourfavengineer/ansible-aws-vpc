@@ -93,6 +93,13 @@
           name: vprofile-privsub3
       register: Privsub3_output
  
-
-
+    - name: Internet Gateway setup 
+      ec2_vpc_igw: 
+        vpc_id: "{{vpcoutput.vpc.id}}"
+        region: "{{region}}"
+        state: "{{state}}"
+         resource_tags: 
+          name: vprofile_IGW
+      register: IGW_output
+      
       
