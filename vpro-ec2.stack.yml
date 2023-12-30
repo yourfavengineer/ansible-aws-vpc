@@ -4,4 +4,6 @@
   gather_facts: no
   tasks:
     - name: VPC setup Variable
-      include_vars: vars/output_vars
+      include_vars: vars/vpc-output-vars
+
+    - name: Import vprofile setup 
