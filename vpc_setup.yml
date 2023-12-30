@@ -28,7 +28,7 @@
         cidr: "{{PubSub1cidr}}"
         map_public: yes
         resource_tags: 
-        name: vprofile-pubsub1
+          name: vprofile-pubsub1
       register: pubsub1_output
 
 
