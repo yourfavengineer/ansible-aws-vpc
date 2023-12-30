@@ -115,6 +115,6 @@
           - "{{pubsub3_output.subnet.id}}"
         routes: 
           - dest: 0.0.0.0/0
-            gateway_id: "{{IGW_output.gateway.id}}"
+            gateway_id: "{{IGW_output.gateway_id}}"
       register: pubroute_output
       
