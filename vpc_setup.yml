@@ -20,7 +20,7 @@
         var: vpcoutput
 
     - name: Create public subnet 1 in ZONE1
-      vpc_subnet_id:
+      ec2_vpc_subnet:
         vpc_id: "{{vpcoutput.vpc.id}}"
         region: "{{region}}"
         az: "{{ZONE1}}"
