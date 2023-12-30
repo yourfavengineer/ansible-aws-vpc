@@ -54,7 +54,7 @@
           Project: Ansible_project
           Owner: DevOps Team
         group_id: "{{bastionSG_output.group_id}}"
-        ec2_vpc_subnet_id: "{{pubsub1id}}"
+        vpc_subnet_id: "{{pubsub1id}}"
       register: bastionhost_output
 
 
