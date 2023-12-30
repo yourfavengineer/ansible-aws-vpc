@@ -155,7 +155,7 @@
         - IGW_output.gateway_id
         - pubroute_output.route_table.id
         - NATGW_output.nat_gateway_id
-        - ATGW_PRIV_output.route_table.id
+        - NATGW_PRIV_output.route_table.id
       
 
       
