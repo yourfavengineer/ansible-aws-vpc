@@ -110,9 +110,9 @@
         tags: 
           name: Vprofile_RT
         subnets:
-          - "{{pubsub1_output.subnet.id}}"
-          - "{{pubsub2_output.subnet.id}}"
-          - "{{pubsub3_output.subnet.id}}"
+          - "{{Privsub1_output.subnet.id}}"
+          - "{{Privsub2_output.subnet.id}}"
+          - "{{Privsub3_output.subnet.id}}"
         routes: 
           - dest: 0.0.0.0/0
             gateway_id: "{{IGW_output.gateway_id}}"
@@ -151,7 +151,7 @@
         - pubsub3_output.subnet.id
         - Privsub1_output.subnet.id
         - Privsub2_output.subnet.id
-        - Privsub2_output.subnet.id
+        - Privsub3_output.subnet.id
         - IGW_output.gateway_id
         - pubroute_output.route_table.id
         - NATGW_output.nat_gateway_id
