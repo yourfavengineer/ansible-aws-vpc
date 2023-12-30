@@ -6,6 +6,12 @@ privsub1id: subnet-003726e5e33531797
 privsub2id: subnet-0b9525c2e8f35f3b3
 privsub3id: subnet-0cd9b055aa5900554
 igwid: igw-00925287f7e99f599
+<<<<<<< HEAD
+ pubRT: rtb-0a5c9ee9d4355ad01
+NATGWid: nat-000e957a344491970
+privRTid: rtb-05b1e82e456d9a0c4
+=======
 pubRT: rtb-0a5c9ee9d4355ad01
 NATGWid: nat-000e957a344491970
 privRTid: rtb-05b1e82e456d9a0c4
+>>>>>>> refs/remotes/origin/vprofile-stack
